@@ -1,0 +1,6 @@
+# Cloudflare Pages configuration
+name = "image-background-remove"
+compatibility_date = "2026-03-28"
+
+[vars]
+REMOVE_BG_API_KEY = "FapLRdAemxCRG6VJxeMHbA3e"

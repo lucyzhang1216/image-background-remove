@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+export const runtime = 'edge'
+
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData()
@@ -17,7 +19,7 @@ export async function POST(request: NextRequest) {
     const buffer = Buffer.from(arrayBuffer)
 
     // Call Remove.bg API
-    const removeBgResponse = await fetch('https://api.remove.bg/v1.0/remove-background', {
+    const removeBgResponse = await fetch('https://api.remove.bg/v1.0/removebg', {
       method: 'POST',
       headers: {
         'X-Api-Key': process.env.REMOVE_BG_API_KEY || '',
